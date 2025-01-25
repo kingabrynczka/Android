@@ -1,7 +1,7 @@
 // URL base da API
 @apiurl = http://127.0.0.1:8080
 # Alterar para acesso remoto
-# @apiurl = https://events.vercel.app/
+# @apiurl = https://android-umber-nine.vercel.app/
 
 @token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczNzgwNTE5MywianRpIjoiZmNjYjkxYjAtNDdhMy00OWEwLWE1YTEtOTBjYzRmM2U0OTgwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OCwibmJmIjoxNzM3ODA1MTkzLCJjc3JmIjoiODU4Y2JmMjQtMTZlZC00NjExLTg1ZDctY2QxZDJlNjg1Yjg5IiwiZXhwIjoxNzM3ODA1MjUzfQ.JY5H86yRY2zrfkKeDCP4YQlYuhuWlW-OuZj9Gyhyx5Y
 @refreshToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczNzgwNDI5NCwianRpIjoiNDFmZGFjMDItNzkzYi00MzZiLWEyMTYtZDM2MjM3YWVkZjhlIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjgsIm5iZiI6MTczNzgwNDI5NCwiY3NyZiI6IjJiNTc2MGNjLWJkZDctNDg1Mi1iZmI2LTkxNTljNmMxMjhmMSIsImV4cCI6MTczNzgwNDg5NH0.Dr12_6CvCcfESP9QuwNCuficLFWwzWpLl8FjqHDLCpo
