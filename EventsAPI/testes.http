@@ -1,0 +1,107 @@
+// URL base da API
+@apiurl = http://127.0.0.1:8080
+# Alterar para acesso remoto
+# @apiurl = https://events.vercel.app/
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczNzgwNTE5MywianRpIjoiZmNjYjkxYjAtNDdhMy00OWEwLWE1YTEtOTBjYzRmM2U0OTgwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OCwibmJmIjoxNzM3ODA1MTkzLCJjc3JmIjoiODU4Y2JmMjQtMTZlZC00NjExLTg1ZDctY2QxZDJlNjg1Yjg5IiwiZXhwIjoxNzM3ODA1MjUzfQ.JY5H86yRY2zrfkKeDCP4YQlYuhuWlW-OuZj9Gyhyx5Y
+@refreshToken = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczNzgwNDI5NCwianRpIjoiNDFmZGFjMDItNzkzYi00MzZiLWEyMTYtZDM2MjM3YWVkZjhlIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjgsIm5iZiI6MTczNzgwNDI5NCwiY3NyZiI6IjJiNTc2MGNjLWJkZDctNDg1Mi1iZmI2LTkxNTljNmMxMjhmMSIsImV4cCI6MTczNzgwNDg5NH0.Dr12_6CvCcfESP9QuwNCuficLFWwzWpLl8FjqHDLCpo
+
+## Test
+GET {{apiurl}}/ HTTP/1.1
+
+##########################################################
+## Auth
+POST {{apiurl}}/login HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "username": "ka3",
+    "password": "0"
+}
+
+##########################################################
+## Register
+POST {{apiurl}}/register HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "email": "ka4",
+    "username": "ka4",
+    "password": "0"
+}
+
+##########################################################
+## Refresh token
+POST {{apiurl}}/refresh HTTP/1.1
+Authorization: {{refreshToken}}
+
+##########################################################
+## List
+GET  {{apiurl}}/list HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}
+
+##########################################################
+## Insert
+POST {{apiurl}}/add_event HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}
+
+{ 
+    "type": "cultural",
+    "description": "Art Exhibition",
+    "location": "City Art Gallery",
+    "event_date": "12/01/2025",
+    "event_time": "12:12",
+    "deadline_date": "13/02/2025",
+    "deadline_time": "12:12",
+    "seats": 100,
+    "price": 10.0
+}
+
+##########################################################
+## Subscribe
+POST {{apiurl}}/subscribe_event HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id_event": 3
+}
+
+##########################################################
+## Unsubscribe
+POST {{apiurl}}/unsubscribe_event HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id_event": 3
+}
+
+##########################################################
+## Delete
+PATCH  {{apiurl}}/delete_event/7 HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}
+
+##########################################################
+## Edit
+PATCH  {{apiurl}}/edit_event HTTP/1.1
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id": 3,
+    "type": "cultural",
+    "description": "Art Exhibition2",
+    "location": "City Art Gallery",
+    "event_date": "12/01/2025",
+    "event_time": "12:12",
+    "deadline_date": "13/02/2025",
+    "deadline_time": "12:12",
+    "seats": 100,
+    "price": 10.0
+}
+
+###

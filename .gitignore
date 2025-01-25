@@ -1,0 +1,25 @@
+# Ignore build artifacts
+/build/
+/dist/
+*.class
+*.jar
+*.war
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+*.iml
+*.vscode/
+
+# Logs
+*.log
+
+# Gradle caches
+.gradle/
+
+# User-specific files
+*.keystore
+*.key
